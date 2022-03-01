@@ -57,4 +57,14 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!-- HTTP 异常处理 -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/common/error/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/common/error/500.jsp</location>
+    </error-page>
+
 </web-app>

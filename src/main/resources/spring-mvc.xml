@@ -25,11 +25,11 @@
     <!-- 默认扫描路径 use-default-filters=true 默认的时候会加载Component等注解 -->
     <context:component-scan base-package="com.leon.**" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
-        <context:include-filter type="annotation"
+       <!-- <context:include-filter type="annotation"
                                 expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
-        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>-->
         <!-- 排除 Service -->
-        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+        <!--<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>-->
     </context:component-scan>
 
     <!-- 开启SpringMVC注解模式 -->

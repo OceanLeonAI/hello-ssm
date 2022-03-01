@@ -30,9 +30,9 @@ public class SysUserServiceImpl implements SysUserService {
     public boolean insert(SysUser sysUser) {
 
         int insert = sysUserMapper.insert(sysUser);
-        int a= 1/0;
+//        int a= 1/0;
         String str = null;
-        str.toString();
+//        str.toString();
 //        if (true) {
 //            throw new ArrayIndexOutOfBoundsException("故意抛出数组越界异常测试");
 //        }
