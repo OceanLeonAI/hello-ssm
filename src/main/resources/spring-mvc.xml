@@ -18,6 +18,9 @@
     只配置黑名单（exclude-filter）：黑名单内的bean不被初始化，其他的均被初始化
     只配置白名单（include-filter）：默认：：：白名单内的bean初始化，既不在白名单也不在黑明单的bean也会被初始化
     3、要想把component-scan默认过滤关闭，只初始化白名单中的bean，需配置use-default-filters="false"
+
+    注意这个大坑特坑
+    https://blog.csdn.net/u013578042/article/details/104650316
  -->
     <!-- 默认扫描路径 use-default-filters=true 默认的时候会加载Component等注解 -->
     <context:component-scan base-package="com.leon.**" use-default-filters="false">
@@ -25,6 +28,8 @@
         <context:include-filter type="annotation"
                                 expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
+        <!-- 排除 Service -->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
     </context:component-scan>
 
     <!-- 开启SpringMVC注解模式 -->
